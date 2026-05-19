@@ -130,7 +130,7 @@
 &trackball_peripheral_listener {
     input-processors =
         // activate Auto_Mouse_Layer (layer 3) for 500ms when trackball moves
-        <&zip_temp_layer 3 500>;
+        <&zip_temp_layer 2 500>;
 };
 //left hand trackball configuration
 
