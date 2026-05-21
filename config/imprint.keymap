@@ -75,7 +75,7 @@
 &kp BACKSPACE  &HRL LEFT_CONTROL A  &HRL LEFT_ALT S  &HRL LEFT_COMMAND D  &HRShiftLeft LEFT_SHIFT F  &kp G                       &kp H      &HRShiftRight RIGHT_SHIFT J  &HMR RIGHT_COMMAND K  &HMR RIGHT_ALT L  &HMR RIGHT_CONTROL SEMI  &kp SQT
 &kp LSHFT      &kp Z                &kp X            &kp C                &kp V                      &kp B                       &kp N      &kp M                        &kp COMMA             &kp DOT           &kp FSLH                 &kp MINUS
 &trans         &trans               &kp LEFT         &kp RIGHT            &trans                                                            &trans                       &kp DOWN_ARROW        &kp UP_ARROW      &trans                   &trans
-                                                                          &lt 1 SPACE                &kp ESCAPE  &kp Z           &kp GRAVE  &kp LC(TAB)                  &kp ENTER
+                                                                          &lt 1 SPACE                &kp ESCAPE  &kp Z           &kp GRAVE  &kp TAB                      &kp ENTER
                                                                           &lt 1 SPACE                &mo 2       &lt 3 DELETE    &kp CAPS   &lt 2 LC(TAB)                &mo 1
             >;
         };
