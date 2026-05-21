@@ -17,9 +17,11 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            hold-while-undecided;
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50 51 52>;
+            flavor = "balanced";
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <150>;
         };
 
         HRShiftLeft: HRShiftLeft {
@@ -29,9 +31,11 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            hold-while-undecided;
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 53 54 55 56 57>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
         };
 
         HMR: HMR {
@@ -148,12 +152,12 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 16 (make it slower for scrolling),,,,,,
+        // multiply sensitivity by 1, divide by 16 (make it slower for scrolling),,,,,,,
         <&zip_xy_scaler 1 16>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
-        // activate Auto_Mouse_Layer (layer 2) for 500ms when scroll ball is touched,
+        // activate Auto_Mouse_Layer (layer 2) for 500ms when scroll ball is touched,,
         <&zip_temp_layer 2 500>;
 };
