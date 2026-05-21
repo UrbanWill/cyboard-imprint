@@ -145,19 +145,16 @@
 // right hand trackball configuration
 
 &trackball_peripheral_listener {
-    input-processors = <&zip_xy_scaler 1 2>, <&zip_temp_layer 2 500>;
+    input-processors = <&zip_xy_scaler 3 4>, <&zip_temp_layer 2 500>;
 };
 
 //left hand trackball configuration
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 16 (make it slower for scrolling),,,,,,,,
         <&zip_xy_scaler 1 16>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,
+        <&zip_scroll_scaler 1 16>,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
-        // activate Auto_Mouse_Layer (layer 2) for 500ms when scroll ball is touched,,,
         <&zip_temp_layer 2 500>;
 };
