@@ -72,7 +72,7 @@
 &kp LSHFT      &kp Z                &kp X            &kp C                &kp V                      &kp B                       &kp N      &kp M                        &kp COMMA             &kp DOT           &kp FSLH                 &kp MINUS
 &trans         &trans               &kp LEFT         &kp RIGHT            &trans                                                            &trans                       &kp DOWN_ARROW        &kp UP_ARROW      &trans                   &trans
                                                                           &lt 1 SPACE                &kp ESCAPE  &kp Z           &kp GRAVE  &kp BSPC                     &kp ENTER
-                                                                          &lt 1 SPACE                &mo 2       &lt 3 DELETE    &kp CAPS   &kp TAB                      &mo 1
+                                                                          &lt 1 SPACE                &mo 2       &lt 3 DELETE    &kp CAPS   &lt 2 LC(TAB)                &mo 1
             >;
         };
 
@@ -139,22 +139,21 @@
 };
 
 // right hand trackball configuration
+
 &trackball_peripheral_listener {
-    input-processors =
-        <&zip_xy_scaler 1 2>,
-        <&zip_temp_layer 2 500>;
+    input-processors = <&zip_xy_scaler 1 2>, <&zip_temp_layer 2 500>;
 };
 
 //left hand trackball configuration
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 16 (make it slower for scrolling),,,,,
+        // multiply sensitivity by 1, divide by 16 (make it slower for scrolling),,,,,,
         <&zip_xy_scaler 1 16>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
-        // activate Auto_Mouse_Layer (layer 2) for 500ms when scroll ball is touched
+        // activate Auto_Mouse_Layer (layer 2) for 500ms when scroll ball is touched,
         <&zip_temp_layer 2 500>;
 };
