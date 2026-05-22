@@ -20,5 +20,7 @@
 include:
   - board: assimilator-bt
     shield: imprint_left
+    cmake-args: "-DEXTRA_DTC_OVERLAY_FILE=\\${ZEPHYR_CYBOARD_IMPRINT_MODULE_DIR}/config/imprint_left.overlay"
   - board: assimilator-bt
     shield: imprint_right
+    cmake-args: "-DEXTRA_DTC_OVERLAY_FILE=\\${ZEPHYR_CYBOARD_IMPRINT_MODULE_DIR}/config/imprint_right.overlay"
