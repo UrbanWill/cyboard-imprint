@@ -147,7 +147,7 @@
 // right hand trackball configuration
 
 &trackball_peripheral_listener {
-    input-processors = <&zip_xy_scaler 3 4>, <&zip_temp_layer 2 500>;
+    input-processors = <&zip_temp_layer 2 500>;
 };
 
 //left hand trackball configuration
